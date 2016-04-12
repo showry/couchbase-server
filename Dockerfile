@@ -29,6 +29,7 @@ COPY scripts/run /etc/service/couchbase-server/run
 
 # Add bootstrap script
 COPY scripts/entrypoint.sh /
+RUN chmod +x -R scripts/*
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["couchbase-server"]
 
